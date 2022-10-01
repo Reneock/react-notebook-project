@@ -30,7 +30,7 @@ class EditNotebook extends Component {
   render() {
     return (
 
-        <Form onSubmit={this.handleSubmit} tyle={{border:"1px solid #36454f", backgroundColor: "#36454f", height: "420px", borderRadius:"5px"}}>
+        <Form onSubmit={this.handleSubmit} style={{border:"1px solid #36454f", backgroundColor: "#36454f", color: "#fff", height: "420px", borderRadius:"5px"}}>
           <Form.Group style={{width: "300px", marginTop:"20px", marginLeft:"50px"}} className="mb-3" controlId="formBasicEmail">
             <Form.Label>Title</Form.Label>
             <Form.Control type="text" placeholder="Notebook title" value={this.state.title} name="title" onChange={this.handleChange}/>
