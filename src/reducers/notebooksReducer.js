@@ -3,9 +3,9 @@ import {v4 as uuid} from "uuid";
 let initialState = {
   notebooks: [
     {title:"HTML", date: "2022-01-28", description: "Introduction to HTML for Beginners" , id: uuid(),},
-    {title:"CSS", date: "2022-03-7", description: "intermediate CSS for inline styling in React", id: uuid(),},
-    {title:"JAVASCRIPT", date: "2022-06-10", description: "All you need to know about JavaScript in coding", id: uuid(),},
-  ],
+   // {title:"CSS", date: "2022-03-7", description: "intermediate CSS for inline styling in React", id: uuid(),},
+    //{title:"JAVASCRIPT", date: "2022-06-10", description: "All you need to know about JavaScript in coding", id: uuid(),},
+  ]
 };
 
 
