@@ -7,10 +7,9 @@ import './App.css';
 
 class App extends Component {
  
- constructor(props) {
-  super();
-  //this.state = { notebooks: []}
-}
+  constructor(props) {
+    super();
+  }
 
 
  render(){ 
