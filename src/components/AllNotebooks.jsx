@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Notebook from './Notebook';
+import { connect } from "react-redux";
 
 const AllNotebooks = (props) => {
   return (
@@ -15,4 +16,10 @@ const AllNotebooks = (props) => {
   );
 }
 
-export default AllNotebooks;
+const mapStateToProps = (state) => {
+  return {
+    notebooksData: state.notebooks,
+  };
+};
+
+export default connect (mapStateToProps) (AllNotebooks);

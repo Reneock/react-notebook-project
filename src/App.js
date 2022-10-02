@@ -9,28 +9,9 @@ class App extends Component {
  
  constructor(props) {
   super();
-  this.state = { notebooks: []}
+  //this.state = { notebooks: []}
 }
 
- addNewNotebook=(notebook)=>{
-  notebook.id = Math.random().toString()
-  this.setState({
-    notebooks: [...this.state.notebooks,notebook]
-  })
- }
-
- deleteNotebook = (id) => {
-  let undeletedNotebooks = this.state.notebooks.filter((notebook) => notebook.id!== id);
-  this.setState({
-    notebooks: undeletedNotebooks
-  })
- }
-
- editNotebook = (id, updatedNotebook) => {
-  this.setState({
-   notebooks: this.state.notebooks.map(notebook => notebook.id === id ? updatedNotebook : notebook)
-  })
- }
 
  render(){ 
     return (
@@ -38,10 +19,10 @@ class App extends Component {
         <Container fluid style={{marginTop: "2rem"}}>
           <Row>
             <Col md="4">
-             <AddNotebook addNotebook ={this.addNewNotebook}/>
+             <AddNotebook />
             </Col>
             <Col>
-             <AllNotebooks notebooksData={this.state.notebooks} deleteNotebook={this.deleteNotebook} editNotebook={this.editNotebook}/>
+             <AllNotebooks />
             </Col>
           </Row>
         </Container>

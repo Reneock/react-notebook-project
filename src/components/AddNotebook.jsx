@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Button} from 'react-bootstrap';
+import {addNotebook} from "../actions/notebooksActions";
+import { connect } from "react-redux";
+import { v4 as uuid } from "uuid";
 
 class AddNotebook extends Component {
   constructor(props){
@@ -16,7 +19,7 @@ class AddNotebook extends Component {
 
   handleSubmit=(e)=>{
     e.preventDefault();
-    this.props.addNotebook(this.state);
+    this.props.addNotebook({id: uuid(), title: this.state.title, date: this.state.date, description: this.state.description,});
     this.setState({title:"", date:"", description: ""});
   };
 
@@ -48,4 +51,8 @@ class AddNotebook extends Component {
   }
 }
 
-export default AddNotebook;
+const mapDispatchToProps = {
+  addNotebook,
+}
+
+export default connect (null, mapDispatchToProps) (AddNotebook);
